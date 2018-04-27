@@ -1,0 +1,158 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Friggeri Resume/CV for A4 paper format
+% XeLaTeX Template
+% Version 1.1
+%
+% A4 version author:
+% Marvin Frommhold (depressiverobot.com)
+% https://github.com/depressiveRobot/friggeri-cv-a4
+%
+% Original author:
+% Adrien Friggeri (adrien@friggeri.net)
+% https://github.com/afriggeri/CV
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important notes:
+% This template needs to be compiled with XeLaTeX and the bibliography, if used,
+% needs to be compiled with biber rather than bibtex.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Options
+% 'print': remove colors from this template for printing
+% 'nocolors' to disable colors in section headers
+\documentclass[print]{cv-a4}
+
+\usepackage{graphicx}
+\usepackage{subcaption}
+
+\begin{document}
+
+\header{Grégoire}{Morpain}{Cloud Architect} % Your name and current job title/field
+
+%----------------------------------------------------------------------------------------
+% SIDEBAR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{aside} % In the aside, each new line forces a line break
+\section{contact}
+\href{mailto:gm@mangrove.ai}{gm@mangrove.ai}
+\href{https://www.linkedin.com/in/gregoiremorpain/en}{linkedin://gregoiremorpain}
+\href{https://github.com/wnkz}{github://wnkz}
+\section{languages}
+french mother tongue
+english fluency
+\section{skills}
+CloudFormation, Terraform
+Docker
+Python, NodeJS
+React
+...
+\end{aside}
+
+%----------------------------------------------------------------------------------------
+% EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{education}
+
+\begin{entrylist}
+
+%------------------------------------------------
+
+\entry
+{2008--2013}
+{Expert {\normalfont in Information Technologies}}
+{EPITECH, France}
+{EPITECH has an innovative methodology based on projects, group work and autonomy which allowed me to turn my passion into a real expertise.}
+
+%------------------------------------------------
+
+\entry
+{2011--2012}
+{Computer Science {\normalfont exchange student}}
+{Concordia University, Canada}
+{During two semesters at Concordia University, I had the opportunity to study computer science in this prestigious university.}
+
+%------------------------------------------------
+
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+% WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{experience}
+
+\begin{entrylist}
+
+%------------------------------------------------
+
+\entry
+{2018--now}
+{Mangrove}
+{Paris, France}
+{\emph{Chief Cloud Architect} \\
+--}
+
+\entry
+{2014--2018}
+{PredicSis}
+{Paris, France}
+{\emph{DevOps Engineer} \\
+I was in charge of the whole AWS cloud architecture and automation as well as CI/CD cycles of various projects.}
+
+\entry
+{2012--2014}
+{BSO Network Solutions}
+{Paris, France}
+{\emph{Systems Engineer} \\
+As an engineer at BSO, I am responsible for the outsourcing of client's platforms sometimes larger than 200 hosts. I am also in charge of the integration of new solutions, providing advices to the customer and doing level 2 \& 3 support.}
+
+%------------------------------------------------
+
+\end{entrylist}
+
+%----------------------------------------------------------------------------------------
+% AWARDS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{certifications}
+
+\begin{figure}[h!]
+  \centering
+  \begin{subfigure}[b]{0.2\linewidth}
+    \includegraphics[width=\linewidth]{images/SAA.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.2\linewidth}
+    \includegraphics[width=\linewidth]{images/SAP.png}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.2\linewidth}
+    \includegraphics[width=\linewidth]{images/BDS.png}
+  \end{subfigure}
+\end{figure}
+
+
+%----------------------------------------------------------------------------------------
+% COMMUNICATION SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{communication skills}
+
+\begin{entrylist}
+
+%------------------------------------------------
+
+\entry
+{2017}
+{AWS Summit Paris}
+{Caroussel du Louvre, France}
+{\emph{\href{https://youtu.be/54cwFTMPxOo}{DevOps on AWS} } -- Presented the way we automated creation of AMI for AWS Marketplace using AWS services and open-source software.}
+
+%------------------------------------------------
+
+\end{entrylist}
+
+\end{document}
