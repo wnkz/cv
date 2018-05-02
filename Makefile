@@ -1,11 +1,16 @@
 .DEFAULT_GOAL := default
 
 # default goal
+all: pdf png
 default: pdf
 
 ## Create PDF
 pdf:
 	xelatex -interaction=nonstopmode -file-line-error cv.tex
+
+## Create PNG
+png:
+	convert -background white -alpha remove -units PixelsPerInch -density 300 cv.pdf samples/cv.png
 
 ## Cleanup build files
 clean:
