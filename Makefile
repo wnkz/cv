@@ -9,7 +9,7 @@ pdf:
 	xelatex -interaction=nonstopmode -file-line-error cv.tex
 
 ## Create PNG
-png:
+png: pdf
 	convert -background white -alpha remove -units PixelsPerInch -density 300 cv.pdf samples/cv.png
 
 ## Cleanup build files
