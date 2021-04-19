@@ -1,20 +1,26 @@
-.DEFAULT_GOAL := default
+.DEFAULT_GOAL := pdf
+
+XELATEX ?= xelatex
+CONVERT ?= convert
 
 # default goal
 all: pdf png
-default: pdf
 
 ## Create PDF
-pdf:
-	xelatex -interaction=nonstopmode -file-line-error cv.tex
+pdf: cv.pdf
 
 ## Create PNG
-png: pdf
-	convert -background white -alpha remove -units PixelsPerInch -density 300 cv.pdf samples/cv.png
+png: samples/cv.png
+
+cv.pdf: cv.tex cv-a4.cls $(wildcard images/*)
+	$(XELATEX) -interaction=nonstopmode -file-line-error $<
+
+samples/cv.png: cv.pdf
+	$(CONVERT) -background white -alpha remove -units PixelsPerInch -density 300 $< $@
 
 ## Cleanup build files
 clean:
-	rm -rf cv.log cv.out cv.aux cv.bcf cv.run.xml
+	$(RM) cv.log cv.out cv.aux cv.bcf cv.run.xml
 
 ## Show this help screen
 help:
